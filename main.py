@@ -118,7 +118,6 @@ kost_prices = [
 506458 ,1462180 ,1390016 
 ]
 
-# Perluas data untuk pengujian kompleksitas
 kost_list *= 10
 kost_prices *= 10
 
@@ -140,20 +139,17 @@ def average_time(func, arr, target, repetitions=10):
         total_time += func(arr, target)
     return total_time / repetitions
 
-# Input dari pengguna
 try:
     target_price = int(input("Masukkan harga yang ingin dicari: "))
 except ValueError:
     print("Input tidak valid. Menggunakan harga default: 1000000")
     target_price = 1000000
 
-# Pastikan data ditemukan jika input tidak ada
 default_price = 1000000
 if target_price not in kost_prices:
     print("Harga tidak ditemukan. Menggunakan harga default: 1000000")
     target_price = default_price
 
-# Cari nama kost berdasarkan harga
 index_found = iteratifAlgo(kost_prices, target_price)
 if index_found != -1:
     print(f"Nama kost dengan harga {target_price}: {kost_list[index_found]}")
@@ -170,7 +166,6 @@ for size in sizes:
     iterative_times.append(average_time(measure_time_iterative, sublist_prices, target_price))
     recursive_times.append(average_time(measure_time_recursive, sublist_prices, target_price))
 
-# Plot grafik iteratif
 plt.figure(figsize=(10, 6))
 plt.plot(sizes, iterative_times, label="Iterative", color="blue")
 plt.xlabel("Input Size", fontsize=12)
@@ -182,7 +177,6 @@ plt.grid(True, linestyle="--", linewidth=0.5)
 plt.tight_layout()
 plt.show()
 
-# Plot grafik rekursif
 plt.figure(figsize=(10, 6))
 plt.plot(sizes, recursive_times, label="Recursive", color="green")
 plt.xlabel("Input Size", fontsize=12)
@@ -194,14 +188,13 @@ plt.grid(True, linestyle="--", linewidth=0.5)
 plt.tight_layout()
 plt.show()
 
-# Plot perbandingan iteratif dan rekursif
 plt.figure(figsize=(10, 6))
 plt.plot(sizes, iterative_times, label="Iterative", color="blue")
 plt.plot(sizes, recursive_times, label="Recursive", color="green")
 plt.xlabel("Input Size", fontsize=12)
 plt.ylabel("Execution Time (seconds)", fontsize=12)
 plt.title("Time Complexity Comparison (Iterative vs Recursive)", fontsize=14)
-plt.gca().invert_xaxis()  # Membalik sumbu X
+plt.gca().invert_xaxis() 
 plt.legend()
 plt.grid(True, linestyle="--", linewidth=0.5)
 plt.tight_layout()
