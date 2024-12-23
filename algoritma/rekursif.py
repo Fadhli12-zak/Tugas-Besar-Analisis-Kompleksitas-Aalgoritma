@@ -1,5 +1,3 @@
-
-
 def rekursif_sequential_search(arr, dest,  i = 0):
     if i >= len(arr):
         return -1
