@@ -1,6 +1,22 @@
-# Tugas-Besar-Analisis-Kompleksitas-Algoritma
-Topik: Analisis Kompleksitas Sequential Search dengan pendekatan Iteratif  dan Rekursif dalam Pencarian Kost disekitar Universitas Telkom  Berdasarkan Harga
+# Sequential Search Complexity Analysis
 
+A Python project that compares **iterative** and **recursive** sequential search approaches using rental price data.
 
-Anggota Kelompok: Fadhli Muhammad Dzaki - 103022330068
-                  Hafidz Musayfa Azmi - 103022300162
+## Overview
+This project analyzes the performance of two search implementations over a large dataset and visualizes execution characteristics to support algorithm comparison.
+
+## Features
+- Iterative sequential search implementation
+- Recursive sequential search implementation
+- Dataset-based search experimentation
+- Execution time measurement
+- Visualization with Matplotlib
+
+## Tech Stack
+- Python
+- Matplotlib
+
+## Run Locally
+```bash
+python main.py
+```
